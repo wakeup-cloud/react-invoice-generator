@@ -16,34 +16,28 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-100 font-sans text-slate-800">
+    <div style={{ backgroundColor: '#f1f5f9', minHeight: '100vh', fontFamily: 'sans-serif' }}>
       
-      {/* 1. 顶部蓝色 Hero 大背景区 */}
-      <header className="bg-blue-600 text-white pt-10 pb-28 px-4 sm:px-6 relative">
-        <div className="max-w-4xl mx-auto flex justify-between items-center">
+      {/* 1. 顶部蓝色大背景区 */}
+      <header style={{ backgroundColor: '#2563eb', color: '#ffffff', paddingTop: '40px', paddingBottom: '120px', paddingLeft: '20px', paddingRight: '20px' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
-            {/* 主标题：SEO 优化且大方专业 */}
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
+            <h1 style={{ fontSize: '28px', fontWeight: 'bold', margin: '0 0 6px 0', color: '#ffffff' }}>
               Free Online Invoice Generator
             </h1>
-            <p className="text-blue-100 text-sm mt-1">
+            <p style={{ margin: 0, color: '#bfdbfe', fontSize: '14px' }}>
               Create and download professional PDF invoices instantly.
             </p>
           </div>
-
-          {/* 右上角 GitHub / 品牌图标（可选） */}
-          <div className="hidden sm:block">
-            <span className="text-xs bg-blue-500 text-blue-100 px-3 py-1.5 rounded-full font-medium">
-              100% Free & Secure
-            </span>
-          </div>
+          <span style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', padding: '6px 12px', borderRadius: '20px', fontSize: '12px' }}>
+            100% Free & Secure
+          </span>
         </div>
       </header>
 
-      {/* 2. 发票工具主体（使用 -mt-20 向上悬浮嵌入蓝色背景） */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 -mt-20 relative z-10 pb-16">
-        <div className="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
-          {/* 你的发票的核心组件 */}
+      {/* 2. 发票工具主体（负 margin 向上嵌入） */}
+      <main style={{ maxWidth: '900px', margin: '-80px auto 0 auto', padding: '0 20px 60px 20px', position: 'relative', zIndex: 10 }}>
+        <div style={{ backgroundColor: '#ffffff', borderRadius: '16px', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)', overflow: 'hidden' }}>
           <InvoicePage data={data} onChange={onInvoiceUpdated} />
         </div>
       </main>
