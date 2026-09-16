@@ -1,19 +1,18 @@
 import React, { FC } from 'react'
 import { PDFDownloadLink } from '@react-pdf/renderer'
-import { Invoice/*, TInvoice*/ } from '../data/types'
+import { Invoice, TInvoice } from '../data/types'
 import { useDebounce } from '@uidotdev/usehooks'
 import InvoicePage from './InvoicePage'
-// import FileSaver from 'file-saver'
+import FileSaver from 'file-saver'
 
 interface Props {
   data: Invoice
   setData(data: Invoice): void
 }
 
-const Download: FC<Props> = ({ data/*, setData*/ }) => {
+const Download: FC<Props> = ({ data, setData }) => {
   const debounced = useDebounce(data, 500)
 
-  /* 
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
     if (!e.target.files?.length) return
 
@@ -43,7 +42,6 @@ const Download: FC<Props> = ({ data/*, setData*/ }) => {
     })
     FileSaver(blob, title + '.template')
   }
-  */
 
   const title = data.invoiceTitle ? data.invoiceTitle.toLowerCase() : 'invoice'
   return (
@@ -57,6 +55,19 @@ const Download: FC<Props> = ({ data/*, setData*/ }) => {
         className="download-pdf__pdf"
       ></PDFDownloadLink>
       <p>Save PDF</p>
+
+      <button
+        onClick={handleSaveTemplate}
+        aria-label="Save Template"
+        title="Save Template"
+        className="download-pdf__template_download mt-40"
+      />
+      <p className="text-small">Save Template</p>
+
+      <label className="download-pdf__template_upload">
+        <input type="file" accept=".json,.template" onChange={handleInput} />
+      </label>
+      <p className="text-small">Upload Template</p>
     </div>
   )
 }
