@@ -55,25 +55,6 @@ const Download: FC<Props> = ({ data, setData }) => {
         className="download-pdf__pdf"
       ></PDFDownloadLink>
       <p>Save PDF</p>
-
-     {/* 2. 注释掉 Save Template */}
-      {/* 
-      <button
-        onClick={handleSaveTemplate}
-        aria-label="Save Template"
-        title="Save Template"
-        className="download-pdf__template_download mt-40"
-      />
-      <p className="text-small">Save Template</p>
-      */}
-
-      {/* 3. 注释掉 Upload Template */}
-      {/* 
-      <label className="download-pdf__template_upload">
-        <input type="file" accept=".json,.template" onChange={handleInput} />
-      </label>
-      <p className="text-small">Upload Template</p>
-      */}
     </div>
   )
 }
