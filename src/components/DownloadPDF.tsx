@@ -54,7 +54,6 @@ const Download: FC<Props> = ({ data, setData }) => {
         title="Save PDF"
         className="download-pdf__pdf"
       ></PDFDownloadLink>
-      <p>Save PDF</p>
 
       <button
         onClick={handleSaveTemplate}
@@ -67,7 +66,6 @@ const Download: FC<Props> = ({ data, setData }) => {
       <label className="download-pdf__template_upload">
         <input type="file" accept=".json,.template" onChange={handleInput} />
       </label>
-      <p className="text-small">Upload Template</p>
     </div>
   )
 }
