@@ -48,6 +48,14 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
     invoiceDueDate.setDate(invoiceDueDate.getDate() + 30)
   }
 
+  // 关键修复：当外部传入的 data（防抖后的数据）更新时，同步更新内部 State
+  // 解决了在生成 PDF 模式下 Logo/数据拿不到最新值的 Bug
+  useEffect(() => {
+    if (data) {
+      setInvoice({ ...data })
+    }
+  }, [data])
+
   const handleChange = (name: keyof Invoice, value: string | number) => {
     if (name !== 'productLines') {
       const newInvoice = { ...invoice }
