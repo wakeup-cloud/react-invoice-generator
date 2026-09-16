@@ -76,11 +76,13 @@
     width: 30px;
     height: 30px;
     background: url('../images/template_download.svg');
+    display: none !important;
   }
   .download-pdf__template_upload {
     width: 30px;
     height: 30px;
     background: url('../images/template_upload.svg');
+    display: none !important;
   }
   input[type='file'] {
     visibility: hidden;
