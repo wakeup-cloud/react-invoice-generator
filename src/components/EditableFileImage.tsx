@@ -27,6 +27,7 @@ const EditableFileImage: FC<Props> = ({
   const fileInput = useRef<HTMLInputElement>(null)
   const widthWrapper = useRef<HTMLDivElement>(null)
   const [isEditing, setIsEditing] = useState<boolean>(false)
+  
   const marks = {
     100: '100px',
     150: '150px',
@@ -64,9 +65,10 @@ const EditableFileImage: FC<Props> = ({
     }
   }
 
-  const handleChangeWidth = (value: number) => {
+  const handleChangeWidth = (val: number | number[]) => {
     if (typeof onChangeWidth === 'function') {
-      onChangeWidth(value)
+      const newWidth = Array.isArray(val) ? val[0] : val
+      onChangeWidth(newWidth)
     }
   }
 
@@ -80,23 +82,23 @@ const EditableFileImage: FC<Props> = ({
     }
   }
 
+  // 1. PDF 渲染模式
   if (pdfMode) {
-    if (value) {
+    if (value && value.trim() !== '') {
       return (
         <Image
           style={{
             ...compose(`image ${className ? className : ''}`),
-            maxWidth: width || 100, 
-            width: width || 100, 
+            width: width || 100,
           }}
           src={value}
         />
       )
-    } else {
-      return <></>
     }
+    return <></>
   }
 
+  // 2. 网页 UI 预览与编辑模式
   return (
     <div className={`image ${value ? 'mb-5' : ''} ${className ? className : ''}`}>
       {!value ? (
@@ -108,7 +110,7 @@ const EditableFileImage: FC<Props> = ({
           <img
             src={value}
             className="image__img"
-            alt={placeholder}
+            alt={placeholder || 'Logo'}
             style={{ maxWidth: width || 100 }}
           />
 
@@ -132,7 +134,7 @@ const EditableFileImage: FC<Props> = ({
                 marks={marks}
                 included={false}
                 step={1}
-                onChange={handleChangeWidth as any}
+                onChange={handleChangeWidth}
                 defaultValue={width || 100}
               />
             </div>
