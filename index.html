@@ -3,13 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- 1. 核心 SEO Meta 标签 -->
     <title>Free Online Invoice Generator - Create & Download PDF Invoices Instantly</title>
-    <meta name="description" content="Free online invoice generator for freelancers, contractors, and small business owners. Easily create, customize, and download professional PDF invoices in seconds with no signup required." />
-    <meta name="keywords" content="free online invoice generator, pdf invoice maker, create invoice online, free invoice template, freelance invoice generator, online billing software, instant pdf invoice" />
+    <meta
+      name="description"
+      content="Free online invoice generator for freelancers, contractors, and small business owners. Easily create, customize, and download professional PDF invoices in seconds with no signup required."
+    />
+    <meta
+      name="keywords"
+      content="free online invoice generator, pdf invoice maker, create invoice online, free invoice template, freelance invoice generator, online billing software, instant pdf invoice"
+    />
     <meta name="robots" content="index, follow, max-image-preview:large" />
+    
+    <!-- 2. 规范链接与多语言标识 -->
     <link rel="canonical" href="https://makeinvoiceonline.com/" />
     <link rel="alternate" hreflang="en" href="https://makeinvoiceonline.com/" />
     <link rel="alternate" hreflang="x-default" href="https://makeinvoiceonline.com/" />
+
+    <!-- 3. Open Graph (Facebook / LinkedIn) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Free Online Invoice Generator - Create & Download PDF Invoices" />
     <meta property="og:description" content="Create professional PDF invoices instantly. Free, fast, and no registration needed." />
@@ -18,21 +30,29 @@
     <meta property="og:image" content="https://makeinvoiceonline.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+
+    <!-- 4. Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Free Online Invoice Generator" />
     <meta name="twitter:description" content="Create and download professional PDF invoices online for free. No signup required." />
     <meta name="twitter:image" content="https://makeinvoiceonline.com/og-image.png" />
+
+    <!-- 5. 性能优化 (DNS Prefetch & Preconnect) -->
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.bunny.net" />
     <link href="https://fonts.bunny.net/css?family=nunito:400,600,700" rel="stylesheet" />
+
+    <!-- 6. 图标与 PWA 适配 -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#2563eb" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- 7. Schema.org 结构化数据 (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -91,54 +111,85 @@
       }
     </script>
   </head>
-  <body>
-    <div id="root"></div>
+  <body style="margin: 0; padding: 0; background-color: #f1f5f9; font-family: 'Nunito', sans-serif;">
+    
+    <!-- 8. 原生 HTML 直出 顶部 Hero 背景区（爬虫秒读） -->
+    <header style="background-color: #2563eb; background-image: linear-gradient(rgba(37, 99, 235, 0.85), rgba(37, 99, 235, 0.85)), url('/src/images/banner.jpg'); background-size: cover; background-position: center; color: #ffffff; padding: 50px 20px 150px; text-align: left;">
+      <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h1 style="font-size: 30px; font-weight: 700; margin: 0 0 8px 0; color: #ffffff; letter-spacing: -0.5px;">
+            Free Online Invoice Generator
+          </h1>
+          <p style="margin: 0; color: #e0f2fe; font-size: 15px; line-height: 1.4;">
+            Create & download professional PDF invoices in seconds. No signup required.
+          </p>
+        </div>
+        <div>
+          <span style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(4px); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; white-space: nowrap;">
+            100% Free & Secure
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 9. React 应用挂载区（负 margin 向上嵌入蓝色 Hero 块） -->
+    <div id="root" style="max-width: 900px; margin: -110px auto 0; padding: 0 20px 40px; position: relative; z-index: 10;"></div>
+    
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script type="module" src="/src/main.tsx"></script>
-    <footer style="max-width: 900px; margin: 50px auto 30px; padding: 0 20px; font-family: 'Nunito', sans-serif; color: #2c3e50; line-height: 1.6;">
-      <section style="background: #ffffff; padding: 32px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
-        <h2 style="font-size: 26px; font-weight: 700; margin-bottom: 16px; color: #1a252f;">
+
+    <!-- 10. 静态 SEO 富文本与 FAQ 模块 -->
+    <footer style="max-width: 900px; margin: 0 auto 50px; padding: 0 20px; color: #2c3e50; line-height: 1.6;">
+      <section style="background: #ffffff; padding: 32px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+        <h2 style="font-size: 24px; font-weight: 700; margin-top: 0; margin-bottom: 16px; color: #1a252f;">
           Free Online Invoice Generator for Freelancers & Businesses
         </h2>
-        <p style="font-size: 16px; margin-bottom: 24px; color: #505a66;">
+        <p style="font-size: 15px; margin-bottom: 24px; color: #505a66;">
           Streamline your billing process with our easy-to-use, free online invoice maker. Designed specifically for freelancers, consultants, contractors, and small business owners who need quick, clean, and professional PDF invoices without complicated software or monthly subscriptions.
         </p>
-        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #2c3e50;">Why Use Our Free Invoice Builder?</h3>
-        <ul style="margin-bottom: 30px; padding-left: 20px; color: #505a66;">
+
+        <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: #2c3e50;">Why Use Our Free Invoice Builder?</h3>
+        <ul style="margin-bottom: 30px; padding-left: 20px; color: #505a66; font-size: 15px;">
           <li style="margin-bottom: 8px;"><strong>100% Free & Unlimited:</strong> Generate as many PDF invoices as you need with zero restrictions.</li>
           <li style="margin-bottom: 8px;"><strong>No Sign-up Required:</strong> Skip account creation and start drafting your invoice in seconds.</li>
           <li style="margin-bottom: 8px;"><strong>Custom Branding:</strong> Easily upload your business logo, adjust layout scaling, and add custom notes or terms.</li>
           <li style="margin-bottom: 8px;"><strong>Automated Calculations:</strong> Subtotals, custom tax percentages, and final totals are calculated instantly.</li>
           <li style="margin-bottom: 8px;"><strong>Privacy-Focused:</strong> All data stays inside your browser. Your financial details are never saved on our servers.</li>
         </ul>
-        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #2c3e50;">How to Create an Invoice Online in 3 Steps</h3>
-        <ol style="margin-bottom: 30px; padding-left: 20px; color: #505a66;">
+
+        <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: #2c3e50;">How to Create an Invoice Online in 3 Steps</h3>
+        <ol style="margin-bottom: 30px; padding-left: 20px; color: #505a66; font-size: 15px;">
           <li style="margin-bottom: 8px;">Fill in your company info, client details, and upload your logo.</li>
           <li style="margin-bottom: 8px;">Add line items, descriptions, rates, quantities, and applicable tax rates.</li>
           <li style="margin-bottom: 8px;">Click "Download PDF" to save a clean, professional invoice directly to your device.</li>
         </ol>
-        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 16px; color: #2c3e50;">Frequently Asked Questions</h3>       
+
+        <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #2c3e50;">Frequently Asked Questions</h3>
+        
         <details style="margin-bottom: 12px; padding: 12px 0; border-bottom: 1px solid #edf2f7;">
-          <summary style="font-weight: 600; font-size: 16px; cursor: pointer; color: #1a252f;">Is this online invoice generator completely free?</summary>
-          <p style="margin-top: 8px; font-size: 15px; color: #616e7c;">
+          <summary style="font-weight: 600; font-size: 15px; cursor: pointer; color: #1a252f;">Is this online invoice generator completely free?</summary>
+          <p style="margin-top: 8px; font-size: 14px; color: #616e7c; margin-bottom: 0;">
             Yes, our invoice maker is 100% free with no hidden fees, subscriptions, or registration required.
           </p>
         </details>
+
         <details style="margin-bottom: 12px; padding: 12px 0; border-bottom: 1px solid #edf2f7;">
-          <summary style="font-weight: 600; font-size: 16px; cursor: pointer; color: #1a252f;">Do I need an account to download my PDF invoice?</summary>
-          <p style="margin-top: 8px; font-size: 15px; color: #616e7c;">
+          <summary style="font-weight: 600; font-size: 15px; cursor: pointer; color: #1a252f;">Do I need an account to download my PDF invoice?</summary>
+          <p style="margin-top: 8px; font-size: 14px; color: #616e7c; margin-bottom: 0;">
             No. You can start typing directly into the invoice editor and download your PDF instantly without logging in.
           </p>
         </details>
+
         <details style="margin-bottom: 12px; padding: 12px 0; border-bottom: 1px solid #edf2f7;">
-          <summary style="font-weight: 600; font-size: 16px; cursor: pointer; color: #1a252f;">Is my information stored on your server?</summary>
-          <p style="margin-top: 8px; font-size: 15px; color: #616e7c;">
+          <summary style="font-weight: 600; font-size: 15px; cursor: pointer; color: #1a252f;">Is my information stored on your server?</summary>
+          <p style="margin-top: 8px; font-size: 14px; color: #616e7c; margin-bottom: 0;">
             No. Your privacy is protected because all information processed during invoice creation remains strictly inside your browser environment.
           </p>
         </details>
+
         <details style="margin-bottom: 12px; padding: 12px 0;">
-          <summary style="font-weight: 600; font-size: 16px; cursor: pointer; color: #1a252f;">Can I add a tax percentage and custom payment terms?</summary>
-          <p style="margin-top: 8px; font-size: 15px; color: #616e7c;">
+          <summary style="font-weight: 600; font-size: 15px; cursor: pointer; color: #1a252f;">Can I add a tax percentage and custom payment terms?</summary>
+          <p style="margin-top: 8px; font-size: 14px; color: #616e7c; margin-bottom: 0;">
             Yes, you can edit the tax field (e.g. Sales Tax 10%) and specify any payment conditions or bank details in the notes section.
           </p>
         </details>
