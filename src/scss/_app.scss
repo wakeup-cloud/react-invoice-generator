@@ -99,7 +99,7 @@
     /* 提升移动端点击区域和视觉质感 */
     width: 50px;
     height: 50px;
-    background-color: #2563eb; /* 加上背景色，防止挡住文字看不清 */
+    /* background-color: #2563eb; */
     border-radius: 50%;        /* 改为圆形悬浮按钮 */
     display: flex;
     flex-direction: column;
@@ -110,8 +110,7 @@
   
   /* 如果按钮里面有文字，移动端可以稍微调整样式 */
   .download-pdf p {
-    font-size: 10px;
-    margin-top: 2px;
+    display: none;
   }
 }
 
